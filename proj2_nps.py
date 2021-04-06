@@ -293,6 +293,20 @@ def make_request_with_cache(baseurl):
 
 #Parsing the dictionaries
 def parse_dictionary(dictionary_item):
+    '''Takes in a dictionary result from the API request and parses its contents
+    in order to return the nearby sites of a national park as a list.
+
+    Parameters
+    ----------
+    dictionary_item: dictionary
+        Dictionary of the get_nearby_places object
+
+    Returns
+    -------
+    list
+        the results of the dictionary search results as NationalSite instances
+        in a list format
+    '''
     API_LIST = []
     searchResults = dictionary_item['searchResults']
 
